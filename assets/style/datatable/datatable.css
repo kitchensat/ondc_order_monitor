@@ -1,0 +1,28 @@
+:root
+{
+    --export_btn_bg: #686868;
+    --export_btn_bg_hover: #969696;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button
+{
+    padding: 0px 8px !important;
+}
+button.dt-button, div.dt-button, a.dt-button, input.dt-button
+{
+    padding: 3px 15px;
+    border: 1px solid transparent;
+    background: var(--export_btn_bg);
+    color: #fff;
+    /* border-radius: 20px; */
+    font-size: 13px;
+    transition: 0.3s;
+}
+button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled), input.dt-button:hover:not(.disabled)
+{
+    background: var(--export_btn_bg_hover);
+    transition: 0.3s;
+}
+button.dt-button:active:not(.disabled), button.dt-button.active:not(.disabled), div.dt-button:active:not(.disabled), div.dt-button.active:not(.disabled), a.dt-button:active:not(.disabled), a.dt-button.active:not(.disabled), input.dt-button:active:not(.disabled), input.dt-button.active:not(.disabled)
+{
+    color: #000;
+}

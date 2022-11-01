@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CACZ;EACI,KAAK,EAAE,IAAI;CAKd",
+    "sources": [
+        "tail-select.scss"
+    ],
+    "names": [],
+    "file": "tail-select.css"
+}

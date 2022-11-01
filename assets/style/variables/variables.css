@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  --font1: 'Quicksand', sans-serif;
+  --font2: 'Open Sans', sans-serif;
+  --light_txt: #fff;
+  --light_bg: #fff;
+  --dark_txt: #000;
+  --dark_bg: #000;
+  --sidebar_bg: #263544;
+  --sidebar_width: 300px;
+  --navbar_height: 60px;
+  --navbar_bg: #fff;
+  --page_bg: #f2f7fb;
+  --nav_shadow: 0 2px 4px 0 rgba(43, 43, 43, 0.10);
+  --side_nav_border: 1px solid #1c2e40;
+  --navbar_text: #d3d3d3;
+  --navbar_hover_text: #FFFFFF;
+  --sidebar_active_border: 3px solid #42a5f5;
+  --sidebar_active_container: #222d3b;
+  --sidebar_current_link_bg: #1d2531;
+  --sidebar_2nd_link: #42a5f5;
+  --sidebar_3rd_bg: #202936;
+  --sidebar_track_bg: #0d1520;
+  --navbar_mobile_txt: #fff;
+  --alert_danger: #ff5c77;
+  --alert_shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  --alert_time_txt: #919aa3;
+  --username_color: #333333;
+  --username_color_mobile: #fff;
+  --page_search_input_bg: #f2f3f5;
+  --page_search_icon: #000;
+  --shadow1: 0 0 5px 0 rgba(43, 43, 43, 0.10), 0 11px 6px -7px rgba(43, 43, 43, 0.10);
+  --margPadd5: 5px;
+  --margPadd10: 10px;
+  --margPadd15: 15px;
+  --margPadd20: 20px;
+  --margPadd25: 25px;
+  --input-border: #ced4da;
+  --wrapper_color: rgba(0,0,0,0.8)
+;
+}
+/*# sourceMappingURL=variables.css.map */

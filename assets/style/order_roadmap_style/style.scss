@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap');
+// font-family: 'Nunito Sans', sans-serif;
+$nunito: 'Nunito Sans', sans-serif;
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+.food-step-container
+{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    padding-bottom: 30px;
+    .food-line,.food-line-temp
+    {
+        height: 2px;
+        position: absolute;
+        top: 17px;
+        left: 5px;
+        // z-index: -1;
+        margin: 0px;
+    }
+    .food-line
+    {
+        background-color: #2cd074;
+        width: 0px;
+    }
+    .food-line.cancelled
+    {
+        background-color: #d34137;
+        width: 0px;
+    }
+    .food-line-temp
+    {
+        width: 1120px;
+        background-color: #d4d4d4;
+    }
+}
+.food-status-container
+{
+    z-index: 10;
+    .food-status
+    {
+        border: none;
+        padding: 4px 40px;
+        font-size: 13px;
+        font-family: $nunito;
+        display: inline-block;
+        margin-right: 15px;
+        color: #bfbcbc;
+        border-radius: 3px;
+        background-color: #d4d4d4;
+        position: relative;
+        ::before
+        {
+            position: absolute;
+            content: "";
+            height: 100%;
+        }
+        .food-status-icon
+        {
+            // transform: translateY(4px);
+            width: 15px;
+            height: 15px;
+        }
+        .food-status-icon2
+        {
+            // transform: translateY(2px);
+            width: 15px;
+            height: 15px;
+        }
+        .food-status-time
+        {
+            display: none;
+            position: absolute;
+            left: 0px;
+            bottom: -21px;
+            font-size: 11px;
+            font-family: $nunito;
+            color: #000;
+        }
+    }
+    .food-status.processed
+    {
+        background-color: #34b942;
+        color: #fff;
+        transition: background-color 0.5s;
+        box-shadow: none;
+    }
+    .food-status.cancelled
+    {
+        background-color: #cc362c;
+        color: #fff;
+        transition: background-color 0.5s;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.food-step-container {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  padding-bottom: 30px;
+}
+
+.food-step-container .food-line, .food-step-container .food-line-temp {
+  height: 2px;
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  margin: 0px;
+}
+
+.food-step-container .food-line {
+  background-color: #2cd074;
+  width: 0px;
+}
+
+.food-step-container .food-line.cancelled {
+  background-color: #d34137;
+  width: 0px;
+}
+
+.food-step-container .food-line-temp {
+  width: 1120px;
+  background-color: #d4d4d4;
+}
+
+.food-status-container {
+  z-index: 10;
+}
+
+.food-status-container .food-status {
+  border: none;
+  padding: 4px 40px;
+  font-size: 13px;
+  font-family: "Nunito Sans", sans-serif;
+  display: inline-block;
+  margin-right: 15px;
+  color: #bfbcbc;
+  border-radius: 3px;
+  background-color: #d4d4d4;
+  position: relative;
+}
+
+.food-status-container .food-status ::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+}
+
+.food-status-container .food-status .food-status-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.food-status-container .food-status .food-status-icon2 {
+  width: 15px;
+  height: 15px;
+}
+
+.food-status-container .food-status .food-status-time {
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: -21px;
+  font-size: 11px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #000;
+}
+
+.food-status-container .food-status.processed {
+  background-color: #34b942;
+  color: #fff;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.food-status-container .food-status.cancelled {
+  background-color: #cc362c;
+  color: #fff;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=style.css.map */
