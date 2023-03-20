@@ -15,7 +15,7 @@ class Order extends CI_Controller {
 
     }
 	
-	public function EXPORT_EXCEL($title='demo',$headers=array(),$data=array())
+	public function EXPORT_EXCEL_OLD($title='demo',$headers=array(),$data=array())
 	{
 		$this->load->library('excel');
 		$file_name = $title.'('.date('Y-m-d h:i').').xls';
@@ -39,6 +39,30 @@ class Order extends CI_Controller {
 		header('Cache-Control: max-age=0'); //no cache
 		$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');  
 		$objWriter->save('php://output');
+	}
+	public function EXPORT_EXCEL($title='demo',$headers=array(),$data=array())
+	{
+		// Excel file name for download 
+		$file_name = $title.'('.date('Y-m-d h:i').').xlsx';
+		
+		// Headers for download 
+		header("Content-Disposition: attachment; filename=\"$file_name\""); 
+		header("Content-Type: application/vnd.ms-excel"); 
+		
+		echo implode("\t", $headers) . "\n"; 
+		if($data){ 
+			foreach($data as $row) { 
+				array_walk($row, function(&$str){ 
+					$str = preg_replace("/\t/", "\\t", $str); 
+					$str = preg_replace("/\r?\n/", "\\n", $str); 
+					if(strstr($str, '"')) $str = '"' . str_replace('"', '""', $str) . '"'; 
+				}); 
+				echo implode("\t", array_values($row)) . "\n"; 
+			} 
+		}else{ 
+			echo 'No records found...'. "\n"; 
+		} 
+		exit;
 	}
 	public function ajax_export_orders()
 	{
